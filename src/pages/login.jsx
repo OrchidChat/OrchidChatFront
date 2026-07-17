@@ -1,7 +1,7 @@
 export function Login(){
     return(
         <>
-            <h1>Login Seite</h1>
+            <h1>Login Site</h1>
 
             <form action="">
                 <label htmlFor="username">Enter Username: </label>
