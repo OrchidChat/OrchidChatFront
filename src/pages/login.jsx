@@ -4,9 +4,9 @@ export function Login(){
             <h1>Login Site</h1>
 
             <form action="">
-                <label htmlFor="username">Enter Username: </label>
+                <label htmlFor="email">Enter email: </label>
                 <br/>
-                <input type="text" id={"username"}/>
+                <input type="email" id={"email"}/>
                 <br/>
                 <label htmlFor="password">Enter Password: </label>
                 <br/>

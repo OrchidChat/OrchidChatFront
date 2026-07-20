@@ -3,10 +3,11 @@ export function Register() {
     async function submit(event) {
         event.preventDefault();
 
-        const url = "something"; // TODO: Endpoint hier einfügen sobald bereit mit Datenbank
+        const url = "http://localhost:8080/api/User/create"; // TODO: Endpoint hier einfügen sobald bereit mit Datenbank
 
         const userData = {
-            username: event.target.username.value,
+            firstname: event.target.firstname.value,
+            lastname: event.target.lastname.value,
             email: event.target.email.value,
             password: event.target.password.value
         }
@@ -32,19 +33,25 @@ export function Register() {
             <h1>Register Site</h1>
 
             <form id={"register-form"} onSubmit={submit}>
-                <label htmlFor="username">Enter a Username: </label>
+                <label htmlFor="firstname">Enter a First Name: </label>
                 <br/>
-                <input type="text" id={"username"}/>
+                <input type="text" id={"firstname"} name={"firstname"}/>
                 <br/>
+
+                <label htmlFor="lastname">Enter a Last Name: </label>
+                <br/>
+                <input type="text" id={"lastname"} name={"lastname"}/>
+                <br/>
+
 
                 <label htmlFor="email">Enter a E-Mail: </label>
                 <br/>
-                <input type="email" id={"email"}/>
+                <input type="email" id={"email"} name={"email"}/>
                 <br/>
 
                 <label htmlFor="password">Enter Password: </label>
                 <br/>
-                <input type="password" id={"password"}/>
+                <input type="password" id={"password"} name={"password"}/>
                 <br/>
 
                 <button type={"submit"}>Register in</button>
