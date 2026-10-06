@@ -9,7 +9,7 @@ export function Register() {
             firstname: event.target.firstname.value,
             lastname: event.target.lastname.value,
             email: event.target.email.value,
-            password: event.target.password.value
+            passwordHash: event.target.password.value
         }
 
         console.log("Gesamellte User Daten", userData);
