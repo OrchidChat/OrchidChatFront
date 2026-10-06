@@ -7,7 +7,7 @@ export function Home() {
     const [text, setText] = useState("");
 
     useEffect(() => {
-        fetch("http://localhost:8080/api/message/chat/1/2")
+        fetch("/api/message/chat/1/2")
             .then(response => response.json())
             .then(data => {
                 console.log("Chatverlauf geladen:", data);
@@ -20,7 +20,7 @@ export function Home() {
 
     useEffect(() => {
         const socket = new WebSocket(
-            "ws://localhost:8080/api/message/websocket/1"
+            "/api/message/websocket/1"
         );
 
         socketRef.current = socket;

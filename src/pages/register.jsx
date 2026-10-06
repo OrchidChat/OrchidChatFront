@@ -3,7 +3,7 @@ export function Register() {
     async function submit(event) {
         event.preventDefault();
 
-        const url = "http://localhost:8080/api/User/create"; // TODO: Endpoint hier einfügen sobald bereit mit Datenbank
+        const url = "/api/User/create"; // TODO: Endpoint hier einfügen sobald bereit mit Datenbank
 
         const userData = {
             firstname: event.target.firstname.value,

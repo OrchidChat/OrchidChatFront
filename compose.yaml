@@ -1,0 +1,15 @@
+services:
+  web:
+    build:
+      context: .
+    restart: unless-stopped
+    ports:
+      - "8081:80"
+    networks:
+      - default
+      - backend
+
+networks:
+  backend:
+    external: true
+    name: orchidchat-backend_default
