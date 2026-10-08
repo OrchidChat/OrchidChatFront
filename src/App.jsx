@@ -1,27 +1,32 @@
-import { createRoot } from 'react-dom/client';
 import './App.css';
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import {Home} from './pages/home'
-import {Login} from './pages/login'
-import {Register} from './pages/register'
+import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
+import { Welcome } from './pages/welcome';
+import { Home } from './pages/home';
+import { Login } from './pages/login';
+import { Register } from './pages/register';
 
 function App() {
+    return (
+        <BrowserRouter>
+            <nav className="navbar">
+                <span className="logo">OrchidChat</span>
 
-  return (
-    <BrowserRouter>
-        <nav>
-            <a href="./home">Home</a>
-            <a href="./login">Login</a>
-            <a href="./register">Register</a>
-        </nav>
+                <div className="nav-links">
+                    <NavLink to="/">Start</NavLink>
+                    <NavLink to="/home">Chat</NavLink>
+                    <NavLink to="/login">Login</NavLink>
+                    <NavLink to="/register">Register</NavLink>
+                </div>
+            </nav>
 
-        <Routes>
-            <Route path="/login" element={<Login/>}/>
-            <Route path="/home" element={<Home/>}/>
-            <Route path="/register" element={<Register/>}/>
-        </Routes>
-    </BrowserRouter>
-  )
+            <Routes>
+                <Route path="/" element={<Welcome />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/home" element={<Home />} />
+                <Route path="/register" element={<Register />} />
+            </Routes>
+        </BrowserRouter>
+    );
 }
 
-export default App
+export default App;

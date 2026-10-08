@@ -107,38 +107,32 @@ export function Home() {
     }
 
     return (
-        <>
+        <div className="chat">
             <h1>Chat von User 1</h1>
 
-            <form onSubmit={sendMessage}>
-                <input
-                    type="text"
-                    value={text}
-                    onChange={event => setText(event.target.value)}
-                />
-
-                <button type="submit">
-                    Senden
-                </button>
-            </form>
-
-            <div className="history">
-                <h2>Chatverlauf</h2>
-
+            <div className="messages">
                 {messages.map((message, index) => (
-                    <div key={message.id ?? index}>
-                        <strong>
-                            User {message.transmitter?.id ?? "?"}:
-                        </strong>
-
+                    <div
+                        key={message.id ?? index}
+                        className={message.transmitter?.id === 1 ? "message mine" : "message"}
+                    >
                         {message.messageParts?.map((part, partIndex) => (
-                            <span key={part.id ?? partIndex}>
-                                {" "}{part.text}
-                            </span>
+                            <span key={part.id ?? partIndex}>{part.text}</span>
                         ))}
                     </div>
                 ))}
             </div>
-        </>
+
+            <form className="chat-form" onSubmit={sendMessage}>
+                <input
+                    type="text"
+                    placeholder="Nachricht schreiben..."
+                    value={text}
+                    onChange={event => setText(event.target.value)}
+                />
+
+                <button type="submit">Senden</button>
+            </form>
+        </div>
     );
 }

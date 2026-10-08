@@ -29,34 +29,27 @@ export function Register() {
     }
 
     return (
-        <>
-            <h1>Register Site</h1>
+        <div className="page">
+            <div className="card">
+                <h1>Registrieren</h1>
 
-            <form id={"register-form"} onSubmit={submit}>
-                <label htmlFor="firstname">Enter a First Name: </label>
-                <br/>
-                <input type="text" id={"firstname"} name={"firstname"}/>
-                <br/>
+                <form className="form" id="register-form" onSubmit={submit}>
+                    <label htmlFor="firstname">Vorname</label>
+                    <input type="text" id="firstname" name="firstname" />
 
-                <label htmlFor="lastname">Enter a Last Name: </label>
-                <br/>
-                <input type="text" id={"lastname"} name={"lastname"}/>
-                <br/>
+                    <label htmlFor="lastname">Nachname</label>
+                    <input type="text" id="lastname" name="lastname" />
 
+                    <label htmlFor="email">E-Mail</label>
+                    <input type="email" id="email" name="email" />
 
-                <label htmlFor="email">Enter a E-Mail: </label>
-                <br/>
-                <input type="email" id={"email"} name={"email"}/>
-                <br/>
+                    <label htmlFor="password">Passwort</label>
+                    <input type="password" id="password" name="password" />
 
-                <label htmlFor="password">Enter Password: </label>
-                <br/>
-                <input type="password" id={"password"} name={"password"}/>
-                <br/>
-
-                <button type={"submit"}>Register in</button>
-            </form>
-        </>
-    )
+                    <button type="submit">Registrieren</button>
+                </form>
+            </div>
+        </div>
+    );
 }
 

@@ -1,19 +1,22 @@
 export function Login(){
     return(
         <>
-            <h1>Login Site</h1>
+            <div className="page">
+                <div className="card">
+                    <h1>Login</h1>
 
-            <form action="">
-                <label htmlFor="email">Enter email: </label>
-                <br/>
-                <input type="email" id={"email"}/>
-                <br/>
-                <label htmlFor="password">Enter Password: </label>
-                <br/>
-                <input type="password" id={"password"}/>
-                <br/>
-                <button type={"submit"}>Log in</button>
-            </form>
+
+                    <form className="form">
+                        <label htmlFor="email">E-Mail</label>
+                        <input type="email" id="email"/>
+
+                        <label htmlFor="password">Password</label>
+                        <input type="password" id="password"/>
+
+                        <button type="submit">Login</button>
+                    </form>
+                </div>
+            </div>
         </>
     )
 }
