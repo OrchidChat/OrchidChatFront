@@ -31,6 +31,17 @@ h1 {
     color: var(--pink);
 }
 
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand img {
+    height: 32px;
+}
+
+
 .nav-links a {
     margin-left: 16px;
     color: var(--light);

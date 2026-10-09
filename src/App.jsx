@@ -1,4 +1,5 @@
 import './App.css';
+import logo from './assets/logo_proto.svg';
 import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
 import { Welcome } from './pages/welcome';
 import { Home } from './pages/home';
@@ -9,7 +10,11 @@ function App() {
     return (
         <BrowserRouter>
             <nav className="navbar">
-                <span className="logo">OrchidChat</span>
+                <div className="brand">
+                    <img src={logo} alt="OrchidChat Logo" />
+                    <span className="logo">OrchidChat</span>
+                </div>
+
 
                 <div className="nav-links">
                     <NavLink to="/">Start</NavLink>
