@@ -1,9 +1,10 @@
-export function Register() {
+import API_URL from "../services/api";
 
+export function Register() {
     async function submit(event) {
         event.preventDefault();
 
-        const url = "/api/User/create"; // TODO: Endpoint hier einfügen sobald bereit mit Datenbank
+        const url = `${API_URL}/api/User/create`;
 
         const userData = {
             firstname: event.target.firstname.value,
