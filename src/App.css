@@ -20,10 +20,29 @@ h1 {
 
 /* Navigation */
 .navbar {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; /* 3 Spalten: Links, Mitte (Auto), Rechts */
+    align-items: center;
     padding: 16px 32px;
     background: var(--dark);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-self: start;
+}
+
+.navbar-center {
+    justify-self: center; /* Erzwingt die exakte Mitte */
+}
+
+.nav-links {
+    justify-self: end; /* Rechtsbündig */
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 .logo {
@@ -31,11 +50,6 @@ h1 {
     color: var(--pink);
 }
 
-.brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
 
 .brand img {
     height: 32px;
@@ -150,4 +164,20 @@ button,
 
 .chat-form input {
     flex: 1;
+}
+
+.logout-button{
+    padding: 5px 12px;
+    cursor: pointer;
+    background: var(--pink);
+    color: white;
+    border: none;
+    borderRadius: 4px;
+
+}
+
+.username{
+    fontWeight: 500;
+    fontSize: 0.95rem;
+    color: var(--light);
 }
