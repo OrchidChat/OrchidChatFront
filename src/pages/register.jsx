@@ -4,7 +4,7 @@ export function Register() {
     async function submit(event) {
         event.preventDefault();
 
-        const url = `${API_URL}/api/User/create`;
+        const url = `${API_URL}/User/create`;
 
         const userData = {
             firstname: event.target.firstname.value,
@@ -36,16 +36,16 @@ export function Register() {
 
                 <form className="form" id="register-form" onSubmit={submit}>
                     <label htmlFor="firstname">Vorname</label>
-                    <input type="text" id="firstname" name="firstname" />
+                    <input type="text" id="firstname" name="firstname" required={true}/>
 
                     <label htmlFor="lastname">Nachname</label>
-                    <input type="text" id="lastname" name="lastname" />
+                    <input type="text" id="lastname" name="lastname" required={true}/>
 
                     <label htmlFor="email">E-Mail</label>
-                    <input type="email" id="email" name="email" />
+                    <input type="email" id="email" name="email" required={true}/>
 
                     <label htmlFor="password">Passwort</label>
-                    <input type="password" id="password" name="password" />
+                    <input type="password" id="password" name="password" required={true}/>
 
                     <button type="submit">Registrieren</button>
                 </form>
