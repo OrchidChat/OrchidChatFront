@@ -133,3 +133,69 @@
     cursor: not-allowed;
     opacity: 0.6;
 }
+
+@media (max-width: 768px) {
+    .chat-layout {
+        width: 100%;
+        height: auto;
+        margin: 16px 0;
+        flex-direction: column; /* Sidebar und Chat untereinander stapeln */
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .sidebar {
+        width: 100%;
+        max-height: 150px;
+        border-right: none;
+        border-bottom: 1px solid var(--light);
+        padding: 10px;
+    }
+
+    .user-list {
+        display: flex;
+        gap: 8px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding-bottom: 4px;
+    }
+
+    .user-item {
+        margin-bottom: 0;
+        white-space: nowrap;
+        font-size: 0.85rem;
+        padding: 6px 10px;
+    }
+
+    .chat-main {
+        height: 55vh; /* Dynamische Höhe für den Chat-Bereich */
+        padding: 12px;
+    }
+
+    .message {
+        max-width: 85%;
+    }
+}
+
+/* Sehr kleine Smartphones (unter 480px) */
+@media (max-width: 480px) {
+    .chat-form {
+        flex-direction: column; /* Input und Senden-Button untereinander */
+    }
+
+    .chat-form button {
+        width: 100%;
+    }
+
+    .chat-main {
+        height: 50vh;
+    }
+
+    /* Touch-freundliche Mindestgrößen für mobile Finger */
+    button,
+    .button,
+    input {
+        min-height: 44px;
+        font-size: 1rem;
+    }
+}
