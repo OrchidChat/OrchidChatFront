@@ -26,6 +26,8 @@ export function Register() {
         } else {
             const savedUser = await userResponse.json();
             console.log("User erfolgreich angelegt:", savedUser);
+            alert("User Erfolgreich angelegt!");
+            window.location.reload();
         }
     }
 
