@@ -1,6 +1,8 @@
 import API_URL from "../services/api";
+import { useNavigate } from "react-router-dom";
 
 export function Register() {
+    const navigate = useNavigate()
     async function submit(event) {
         event.preventDefault();
 
@@ -27,7 +29,7 @@ export function Register() {
             const savedUser = await userResponse.json();
             console.log("User erfolgreich angelegt:", savedUser);
             alert("User Erfolgreich angelegt!");
-            window.location.reload();
+            navigate("/login")
         }
     }
 
